@@ -6,8 +6,11 @@
 #include "ResManager.h"
 
 StatusBar::StatusBar(int h, int w, int y, int x) : PanelBase(h, w, y, x) {
+    //set color
     wbkgdset(win, COLOR_PAIR(ResManager::getColorPair("statusBar")));
+    //enable bold text
     wattron(win, A_BOLD);
+    //fill with bg color
     wclear(win);
 }
 
